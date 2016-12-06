@@ -1,0 +1,1 @@
+json.partial! "theme1s/theme1", theme1: @theme1

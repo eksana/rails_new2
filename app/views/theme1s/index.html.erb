@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Theme1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Qty items</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @theme1s.each do |theme1| %>
+      <tr>
+        <td><%= theme1.name %></td>
+        <td><%= theme1.qty_items %></td>
+        <td><%= link_to 'Show', theme1 %></td>
+        <td><%= link_to 'Edit', edit_theme1_path(theme1) %></td>
+        <td><%= link_to 'Destroy', theme1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Theme1', new_theme1_path %>

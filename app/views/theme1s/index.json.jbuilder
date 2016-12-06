@@ -1,0 +1,1 @@
+json.array! @theme1s, partial: 'theme1s/theme1', as: :theme1
