@@ -8,6 +8,16 @@
 Image.delete.all
 Image.raset_pk_sequence
 Image.create([
-    {name:'природа1','dragonfly-1729157_640.jpg', theme1:1},
-    {name:'природа2','grass-1331703_640.jpg', theme1:1}
+    {name:'природа1',file: 'dragonfly-1729157_640.jpg', theme1_id:1},
+    {name:'природа2',file: 'grass-1331703_640.jpg', theme1_id:2},
+    {name:'природа3',file: 'painted-lady-1568926_640.jpg', theme1_id:3},
+             ])
+
+Theme1.delete.all
+Theme1.raset_pk_sequence
+Theme1.create([
+                  {name: "-----"},      # 1 Нет темы
+                 {name:"Опишите1"},#2
+                  {name:"Опишите2"},#3
+                  {name:"Опишите3"},#4
              ])

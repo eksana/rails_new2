@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsOk2</title>
+    <title>Rails_new2</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +10,10 @@
 
   <body>
   <%= render 'add/header' %>
+  <div class="container">
+  <%= yield %>
+  </div>
   <%= render 'add/footer' %>
-    <%= yield %>
+
   </body>
 </html>
