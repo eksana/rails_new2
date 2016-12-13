@@ -1,11 +1,22 @@
-<h1>Work#choose_theme</h1>
-<p>Find me in app/views/work/choose_theme.html.erb</p>
-.form_select
-    =form_tag('/display_theme',remote:true, :form=>"js")do
-  =select_tag:theme
-option_for_select(@themes1,selected:@selected_theme),
-prompt:t('.select_theme'),
-onchange:"$(this).parent('form').submit();",
-formats:[js]
+//<h1>Work#choose_theme</h1>
+//<p>Find me in app/views/work/choose_theme.html.erb</p>
+console.log(": In choose_theme"  );
 
 
+$('.image .image_display .image_diag').css({"display": "none"});
+$('.img-left-side').css({"display": "none"});
+$('.img-right-side').css({"display": "none"});
+
+// to check whether the target is the content-area itself or a child of the content-area.
+$(document).click(function(e){
+  if($(e.target).is(".select_theme") || $(e.target).closest(".select_theme").length) {
+    console.log(": In doc.click = IN side content area"  );
+
+  }
+  else {
+    console.log(": In doc.click = OUT side content area"  );
+    $('.form_select').css({"display": "none"});		// убираем форму селект и показываем кнопку выбора темы
+    $('.select_theme').empty().html("<%= j render 'work/button_theme_select' %>");
+  }
+});
+$('.select_theme').empty().html("<%= j render 'choose_theme_from_arr' %>");

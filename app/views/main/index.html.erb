@@ -1,2 +1,58 @@
 <h1>Main#index</h1>
 <p>Find me in app/views/main/index.html.erb</p>
+
+<div class="container">
+  <h1>Work#index</h1>
+  <p>Find me in app/views/work/index.html.erb</p>
+  <div class="row">
+    <div class="col-md-3"> 	<!--область управления - кнопки-->
+
+
+      <div class="left_controls">
+        <div class="select_theme">
+          <button class="button__left theme">
+            <%= link_to "select_theme_bt", choose_theme_path, title: "Select theme from your device folder",  format: "js", remote: true %>
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="col-md-9">	<!--область отображения-->
+    <div class="image_display"></div>
+    <div class="row image"></div>
+  </div>
+  <div class="col-md-12">
+    <h2 class="up-theme" title ="theme_name"></h2>  	<!-- название темы-->
+    <%= @selected_theme %>
+  </div>
+  <div class="container">
+    <div class="col-md-12">
+      <h2 class="up" title = "Image file name"></h2>
+    </div>
+
+    <div class="col-md-1">
+      <div class="img-left-side">
+        <h3 title = "list to previous image"></h3> 	<!-- кнопка перелистывания влево.-->
+        <i class="fa fa-chevron-circle-left strong"></i>
+      </div>
+    </div>
+
+    <div class="col-md-10">	<!-- область отображения изображения-->
+      <div class="img-center" title = "Default image" >	<!-- изображение по умолчанию-->
+        <!--<img alt = "Default Image"  src = "images/logo.jpg"  title ="Default image"  width="189" height="255">-->
+        <%= link_to image_tag("logo.jpg", title:"Default image" , width:"700", height:"255") %>
+        <div class="image_user_value" title = "Expert value"></div>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div class="img-right-side ">       <!-- кнопка перелистывания вправо-->
+        <h3 title = "list to next image"></h3>
+        <i class="fa fa-chevron-circle-right  strong"></i>
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,8 @@
+<div class = "form_select">
+<%= form_tag("/display_theme", remote: true, form: "js") do %>
+<%= select_tag (:theme) %>
+<%= option_for_select(@themes1,selected: @selected_theme) %>
+<%= prompt :'<div class = "select_theme">' %>
+<%= onchange :"$(this).parent('form').submit();" %>
+<%= formats : js %>
+</div>

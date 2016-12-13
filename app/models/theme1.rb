@@ -1,3 +1,3 @@
-class Theme1 < ApplicationRecord
-  has_many:images
+class Theme1 < ApplicationRecord ::Base
+  has_many :images
 end
