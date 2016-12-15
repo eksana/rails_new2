@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   get 'main/contacts'
 
   get 'main/about'
+  get  'help' => 'main#help'
+  get  'index' => 'main#index'
+  get  'about' => 'main#about'
   get  'work' => 'work#index'
   get  'choose_theme' => 'work#choose_theme'
   get  'display_theme' => 'work#display_theme'

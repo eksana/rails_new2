@@ -15,10 +15,13 @@
       <div class="hidden-xs col-sm-12 col-md-6 col-lg-6">
         <nav class="home-nav">
           <ul>
-            <li class="home-item home-item--active"><a href="#" class=" home-item-link--active">О нас</a></li>
-            <li class="home-item"><a href="#" class="home-item-link">Предложения</a></li>
-            <li class="home-item"><a href="#" class="home-item-link">События</a></li>
-            <li class="home-item"><a href="#" class="home-item-link">Контакты</a></li>
+           <!-- <li class="home-item home-item--active"><a href="#" class=" home-item-link--active">О нас</a></li>-->
+            <li class="home-item home-item--active"><%= link_to "About", about_path, class:"home-item-link" %></li>
+            <!--<li class="home-item"><a href="#" class="home-item-link">Предложения</a></li>-->
+            <li class="home-item"><%= link_to "Help", help_path, class:"home-item-link" %></li>
+            <!--<li class="home-item"><a href="#" class="home-item-link">События</a></li>-->
+            <!--<li class="home-item"><a href="#" class="home-item-link">Контакты</a></li>-->
+            <li class="home-item"><%= link_to "Index", index_path, class:"home-item-link" %></li>
 
           </ul>
         </nav>
