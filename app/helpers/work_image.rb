@@ -57,6 +57,8 @@ module WorkImage
     logger.info "In show_image:  data = #{data.inspect} "
     data
   end
+end
+
 
 
 
